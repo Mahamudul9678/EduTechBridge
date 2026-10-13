@@ -4,84 +4,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | EduTechBridge</title>
+    <title>EduTechBridge</title>
 </head>
 <body>
 
     <header>
         <h1>EduTechBridge</h1>
         <p>ADTU Learning Hub</p>
+
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#login">Login</a> |
+            <a href="#resources">Resources</a> |
+            <a href="#syllabus">Syllabus</a>
+        </nav>
     </header>
 
     <main>
-        <h2>Welcome Back!</h2>
-        <p>Log in to access your learning resources.</p>
+        <section id="home">
+            <h2>Welcome to EduTechBridge</h2>
+            <p>
+                Find university notes, reference books,
+                assignments and learning resources in one place.
+            </p>
+        </section>
 
-        <form id="loginForm">
+        <hr>
 
-            <div>
-                <label for="name">Full Name</label><br>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your full name"
-                    required
-                >
-            </div>
+        <section id="login">
+            <h2>Login</h2>
 
-            <br>
+            <form>
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+                <br><br>
 
-            <div>
-                <label for="email">Email Address</label><br>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
-            </div>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password"
+                       placeholder="Enter your password" required>
+                <br><br>
 
-            <br>
-
-            <div>
-                <label for="password">Password</label><br>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Enter your password"
-                    required
-                    minlength="6"
-                >
-            </div>
-
-            <br>
-
-            <div>
-                <label for="role">Select Your Role</label><br>
-                <select id="role" name="role" required>
-                    <option value="">Choose your role</option>
+                <label for="role">Your Role:</label><br>
+                <select id="role" required>
+                    <option value="">Select your role</option>
                     <option value="student">Student</option>
                     <option value="teacher">Teacher</option>
                 </select>
-            </div>
+                <br><br>
 
-            <br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
 
-            <button type="submit">Login</button>
+        <hr>
 
-        </form>
+        <section id="resources">
+            <h2>Learning Resources</h2>
+            <p>Explore the available resource categories.</p>
 
-        <p>
-            Don't have an account?
-            <a href="#register">Register here</a>
-        </p>
+            <article>
+                <h3>Study Notes and PDFs</h3>
+                <p>Find subject-wise notes for your semester.</p>
+                <a href="#resource-table">View resources</a>
+            </article>
 
-        <section id="register">
-            <h3>New to EduTechBridge?</h3>
-            <p>Registration will be implemented in a later stage.</p>
+            <article>
+                <h3>Reference Books</h3>
+                <p>Discover recommended books for your subjects.</p>
+                <a href="#resource-table">View resources</a>
+            </article>
+
+            <article>
+                <h3>Assignments and Projects</h3>
+                <p>Find assignment instructions and project guides.</p>
+                <a href="#resource-table">View resources</a>
+            </article>
+
+            <article>
+                <h3>Practice Quizzes</h3>
+                <p>Prepare for exams with subject-wise quizzes.</p>
+                <a href="#resource-table">Explore resources</a>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="resource-table">
+            <h2>Sample Resource List</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Resource Name</th>
+                        <th>Subject</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>DBMS Unit 1 Notes</td>
+                        <td>DBMS</td>
+                        <td>PDF</td>
+                    </tr>
+
+                    <tr>
+                        <td>Java Programming Guide</td>
+                        <td>Java</td>
+                        <td>Book</td>
+                    </tr>
+
+                    <tr>
+                        <td>Network Topology Project</td>
+                        <td>Computer Networks</td>
+                        <td>Project</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                These are sample records. Real resources
+                will be connected to the database later.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="syllabus">
+            <h2>University Syllabus</h2>
+            <ol>
+                <li>Semester-wise syllabus</li>
+                <li>Subject-wise syllabus</li>
+                <li>Unit-wise topics</li>
+            </ol>
         </section>
     </main>
 
