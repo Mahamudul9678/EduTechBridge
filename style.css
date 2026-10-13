@@ -1,0 +1,212 @@
+
+/* Basic page design */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Website header */
+header {
+    background-color: #2563eb;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 5px 0 15px;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+/* Headings */
+h2 {
+    color: #1d4ed8;
+}
+
+h3 {
+    color: #334155;
+}
+
+/* Login form */
+input,
+select {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+/* Buttons */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Links */
+a {
+    color: #2563eb;
+}
+
+/* Resource cards */
+article {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 8px;
+}
+
+/* Resource table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+}
+
+th {
+    background-color: #dbeafe;
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    header {
+        padding: 18px 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 4px;
+    }
+
+    main {
+        padding: 12px;
+        margin: 12px auto;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+/* Day 7: Arrange resource cards using CSS Grid */
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Make each resource card look neat */
+.resource-grid article {
+  margin: 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.resource-grid article:hover {
+  transform: translateY(-4px);
+}
+
+/* Navigation links using Flexbox */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 600px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-grid article {
+    padding: 16px;
+  }
+}
