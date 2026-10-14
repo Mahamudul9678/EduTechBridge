@@ -210,3 +210,170 @@ nav {
     padding: 16px;
   }
 }
+/* Day 8: Responsive login form */
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 28px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.login-card h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.login-card p {
+  text-align: center;
+  color: #64748b;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-card label {
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.login-card input,
+.login-card select {
+  width: 100%;
+  max-width: none;
+  padding: 12px;
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* Tablet and mobile screens */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 20px;
+  }
+
+  .login-card h2 {
+    font-size: 22px;
+  }
+
+  .login-card input,
+  .login-card select,
+  .login-card button {
+    font-size: 16px;
+  }
+}
+/* Day 9: Resource card design */
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.resource-icon {
+  font-size: 32px;
+}
+
+.resource-category {
+  padding: 5px 10px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.resource-card h3 {
+  margin: 0;
+}
+
+.resource-card p {
+  margin: 0 0 8px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.resource-btn {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.resource-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Keep cards responsive */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 600px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-card {
+    padding: 18px;
+  }
+}
+/* Day 10: Resource search box */
+
+.search-container {
+  margin: 20px 0;
+}
+
+#resourceSearch {
+  width: 100%;
+  max-width: none;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 16px;
+}
+
+#resourceSearch:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+#searchMessage {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 8px;
+}
