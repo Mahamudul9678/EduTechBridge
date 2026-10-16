@@ -377,3 +377,98 @@ nav {
   font-size: 14px;
   margin-top: 8px;
 }
+/* Day 11: Category filter buttons */
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  background: #e2e8f0;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+@media (max-width: 600px) {
+  .filter-buttons {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 9px 12px;
+  }
+}
+/* Day 12: Syllabus section */
+
+#semesterSelect {
+  display: block;
+  margin: 12px 0;
+}
+
+.syllabus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.syllabus-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.syllabus-card h3 {
+  margin-top: 14px;
+}
+
+.syllabus-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.semester-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.syllabus-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.syllabus-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .syllabus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .syllabus-card {
+    padding: 16px;
+  }
+}

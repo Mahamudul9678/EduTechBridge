@@ -27,7 +27,7 @@
             <h2>Welcome to EduTechBridge</h2>
             <p>
                 Find university notes, reference books,
-                assignments and learning resources in one place.
+                assignments, quiz and learning resources in one place.
             </p>
         </section>
 
@@ -98,6 +98,22 @@
 </div>
 
   <div class="resource-grid">
+    <div class="filter-buttons">
+  <button type="button" class="filter-btn active"
+          data-category="all">All</button>
+
+  <button type="button" class="filter-btn"
+          data-category="notes">Notes</button>
+
+  <button type="button" class="filter-btn"
+          data-category="books">Books</button>
+
+  <button type="button" class="filter-btn"
+          data-category="assignments">Assignments</button>
+
+  <button type="button" class="filter-btn"
+          data-category="projects">Projects</button>
+</div>
 
     <article class="resource-card">
       <div class="resource-icon">📘</div>
@@ -217,6 +233,59 @@
         <hr>
 
         <section id="syllabus">
+          <section id="syllabus">
+  <h2>Semester Syllabus</h2>
+  <p>Choose a semester to explore subjects and syllabus details.</p>
+
+  <label for="semesterSelect">Select Semester</label>
+  <select id="semesterSelect">
+    <option value="all">All Semesters</option>
+    <option value="1">Semester 1</option>
+    <option value="2">Semester 2</option>
+    <option value="3">Semester 3</option>
+    <option value="4">Semester 4</option>
+    <option value="5">Semester 5</option>
+    <option value="6">Semester 6</option>
+    <option value="7">Semester 7</option>
+    <option value="8">Semester 8</option>
+  </select>
+
+  <p id="syllabusMessage" aria-live="polite">
+    Showing all sample subjects.
+  </p>
+
+  <div class="syllabus-grid">
+
+    <article class="syllabus-card" data-semester="3">
+      <span class="semester-tag">Semester 3</span>
+      <h3>Data Structures</h3>
+      <p>Learn arrays, linked lists, stacks, queues and trees.</p>
+      <a href="#" class="syllabus-link">View Syllabus</a>
+    </article>
+
+    <article class="syllabus-card" data-semester="3">
+      <span class="semester-tag">Semester 3</span>
+      <h3>Object-Oriented Programming</h3>
+      <p>Study classes, objects, inheritance and polymorphism.</p>
+      <a href="#" class="syllabus-link">View Syllabus</a>
+    </article>
+
+    <article class="syllabus-card" data-semester="5">
+      <span class="semester-tag">Semester 5</span>
+      <h3>Database Management Systems</h3>
+      <p>Explore SQL, normalization, ER models and transactions.</p>
+      <a href="#" class="syllabus-link">View Syllabus</a>
+    </article>
+
+    <article class="syllabus-card" data-semester="5">
+      <span class="semester-tag">Semester 5</span>
+      <h3>Computer Networks</h3>
+      <p>Learn networking layers, IP addressing and routing.</p>
+      <a href="#" class="syllabus-link">View Syllabus</a>
+    </article>
+
+  </div>
+</section>
             <h2>University Syllabus</h2>
             <ol>
                 <li>Semester-wise syllabus</li>
